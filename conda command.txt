@@ -1,0 +1,50 @@
+□ 가상환경설정
+
+ - 아나콘다 버전 확인
+conda --version
+
+ - 가상환경 생성 (name: 가상환경이름, 3.7: 파이썬버전)
+conda create -n name python=3.7
+
+ - 가상환경 목록 보기
+conda env list
+
+ - 가상환경 제거 (name: 가상환경이름)
+conda env remove -n name
+
+ - 가상환경 실행 (name: 가상환경이름)
+conda activate name
+
+ - 가상환경 종료
+conda deactivate
+
+ - (conda install)로 설치된 패키지 목록 보기
+conda list
+
+ - (pip install)로 설치된 패키지 목록 보기
+pip list
+
+ - 가상환경 설정 .yaml로 저장하기 (name: 가상환경이름)
+ - 현재 워킹 디렉토리 하에 저장됨
+conda env export > name.yaml
+
+ - 저장된 .yaml로부터 가상환경 만들기
+conda env create -n newname -f name.yaml
+
+ - 가상환경 복제하기 (newname: 새 가상환경, name: 복제할 가상환경)
+conda create -n newname --clone name
+
+
+□ 주피터 랩
+
+* Jupyter notebook = Jupyter lab (랩은 노트북의 새로운 버전)
+* 개발자의 취향에 따라 둘 중 아무거나 사용
+
+ - 주피터 랩 설치
+pip install jupyter
+
+ - 주피터 랩 실행
+jupyter lab
+
+ - 주피터 랩 닫기
+아나콘다 프롬프트에서 'Ctrl+C' 2번
